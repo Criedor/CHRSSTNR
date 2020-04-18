@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Christoph Steiner - CV & Portfilio</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CHristoph Steiner - CV & Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Rubik:100,300,400,700,900&display=swap' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="site_header" class="site_header">
+        <div id="navigation" class="navigation">
+            <div id="home" class="home">
+                <a href="index.html">CHRS<br />STNR</a>
+            </div>
+            <div class="menu" id="menu">
+                <nav>
+                    <ul class="menu_list">
+                        <li class="menu_item">
+                            <a href="#">EXPERIENCE</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">SKILLS</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">PORTFOLIO</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">GET CV</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <img id="nav_toggle_btn" class="nav_toggle" onclick="showNavMenu()" src="src/img/nav_btn.png">
+        </div>
+
+    </header>
+    <about>
+        <div class="about" id="about">
+            <div id="about_inner" class="about_inner ">
+                <img src="src/img/portrait.png" alt="Christoph Steiner">
+                <div class="abouttext"><h2>Hi, i am Chris.</h2>
+                <p>Experienced, resourceful Project Manager who has overseen several successful projects from the fields
+                    of IT, marketing and legal. Also trained Advanced SCRUM Master, Prince2 Practitioner Master and
+                    Fullstack Web-Developer. Organised and communicative team player, driven to solve problems and take
+                    on new challenges.</p>
+                </div>
+            </div>
+        </div>
+    </about>
+    <script>
+        function showNavMenu() {
+            document.getElementById("menu").classList.toggle("slideInDown");
+            document.getElementById("menu").classList.toggle("menu_navtoggle")
+            document.getElementById("site_header").classList.toggle("site_header");
+            document.getElementById("site_header").classList.toggle("site_header_navtoggle");
+            document.getElementById("home").classList.toggle("home")
+            document.getElementById("home").classList.toggle("home_navtoggle")
+        }
+    </script>
+
+</body>
+
+</html>

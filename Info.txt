@@ -1,0 +1,4 @@
+working on the navbar:
+    define classes for the @media
+    work on css transition effects
+
