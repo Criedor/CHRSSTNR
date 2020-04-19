@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="site_header" class="site_header">
+    <div id="site_header" class="site_header">
         <div id="navigation" class="navigation">
             <div id="home" class="home">
                 <a href="index.html">CHRS<br />STNR</a>
@@ -42,7 +42,7 @@
             <img id="nav_toggle_btn" class="nav_toggle" onclick="showNavMenu()" src="src/img/nav_btn.png">
         </div>
 
-    </header>
+    </div>
     <about>
         <div class="about" id="about">
             <div id="about_inner" class="about_inner ">
@@ -60,10 +60,10 @@
         function showNavMenu() {
             document.getElementById("menu").classList.toggle("slideInDown");
             document.getElementById("menu").classList.toggle("menu_navtoggle")
-            document.getElementById("site_header").classList.toggle("site_header");
-            document.getElementById("site_header").classList.toggle("site_header_navtoggle");
             document.getElementById("home").classList.toggle("home")
             document.getElementById("home").classList.toggle("home_navtoggle")
+            document.getElementById("site_header").classList.toggle("site_header");
+            document.getElementById("site_header").classList.toggle("site_header_navtoggle")
         }
     </script>
 

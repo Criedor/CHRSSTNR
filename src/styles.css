@@ -62,7 +62,7 @@ nav {
     display: flex;
     align-items: flex-end;
     transition: all ease-in .5s;
-    z-index: 99
+    z-index: 10;
 }
 
 .navigation {
@@ -73,7 +73,6 @@ nav {
     max-width: 1700px;
     width: 92%;
     margin: auto;
-;
 }
 
 .home {
@@ -200,7 +199,7 @@ nav {
 
 .about img{
     height: 50%;
-    width: 50%
+    width: 50%;
     border-radius: 20px;
     border: 20px solid black;
 }
@@ -220,12 +219,12 @@ nav {
     display: flex;
     align-items: flex-end;
     transition: all ease-in 1s;
-    z-index: 99;
+    z-index: 10;
 }
 
 .menu_navtoggle {
     display: block !important;
-    z-index: 80;
+    transition: all ease-in 1s;
 }
 
 .home_navtoggle {
@@ -325,6 +324,7 @@ nav {
     @-webkit-keyframes slideInDown {
         0% {
             -webkit-transform: translateY(-100%);
+            -webkit-transform-origin: initial;
             transform: translateY(-100%);
             visibility: visible;
             opacity: 0;
@@ -351,5 +351,3 @@ nav {
             opacity: 1;
         }
     }
-
-    ×
