@@ -13,57 +13,109 @@
 </head>
 
 <body>
-    <div id="site_header" class="site_header">
-        <div id="navigation" class="navigation">
-            <div id="home" class="home">
-                <a href="index.html">CHRS<br />STNR</a>
+    <header>
+        <div id="site_header" class="site_header">
+            <div id="navigation" class="navigation">
+                <div id="home" class="home">
+                    <a href="index.html">CHRS<br />STNR</a>
+                </div>
+                <div class="menu" id="menu">
+                    <nav>
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="#">EXPERIENCE</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#">SKILLS</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#">PORTFOLIO</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#">GET CV</a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#">CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <img id="nav_toggle_btn" class="nav_toggle" onclick="showNavMenu()" src="src/img/nav_btn.png">
             </div>
-            <div class="menu" id="menu">
-                <nav>
-                    <ul class="menu_list">
-                        <li class="menu_item">
-                            <a href="#">EXPERIENCE</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="#">SKILLS</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="#">PORTFOLIO</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="#">GET CV</a>
-                        </li>
-                        <li class="menu_item">
-                            <a href="#">CONTACT</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <img id="nav_toggle_btn" class="nav_toggle" onclick="showNavMenu()" src="src/img/nav_btn.png">
         </div>
+    </header>
 
-    </div>
-    <about>
-        <div class="about" id="about">
-            <div id="about_inner" class="about_inner ">
-                <img src="src/img/portrait.png" alt="Christoph Steiner">
-                <div class="abouttext"><h2>Hi, i am Chris.</h2>
-                <p>Experienced, resourceful Project Manager who has overseen several successful projects from the fields
-                    of IT, marketing and legal. Also trained Advanced SCRUM Master, Prince2 Practitioner Master and
-                    Fullstack Web-Developer. Organised and communicative team player, driven to solve problems and take
-                    on new challenges.</p>
+    <nav_toggle>
+        <div class="menu_toggle" id="menu_toggle">
+
+            <ul class="menu_list">
+                <li class="menu_item">
+                    <a href="#">EXPERIENCE</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">SKILLS</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">PORTFOLIO</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">GET CV</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+    </nav_toggle>
+    <div class="content_container">
+
+
+        <about>
+            <div class="about" id="about">
+                <div id="about_inner" class="about_inner ">
+                    <img src="src/img/portrait.png" alt="Christoph Steiner">
+                    <div class="abouttext">
+                        <h2>Hi, i am Chris.</h2>
+                        <p>Experienced, resourceful Project Manager who has overseen several successful projects from
+                            the
+                            fields
+                            of IT, marketing and legal. Also trained Advanced SCRUM Master, Prince2 Practitioner Master
+                            and
+                            Fullstack Web-Developer. Organised and communicative team player, driven to solve problems
+                            and
+                            take
+                            on new challenges.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </about>
+        </about>
+    </div>
     <script>
+        let navtoggler = 0
+
         function showNavMenu() {
-            document.getElementById("menu").classList.toggle("slideInRight");
-            document.getElementById("menu").classList.toggle("menu_navtoggle")
-            document.getElementById("home").classList.toggle("home")
-            document.getElementById("home").classList.toggle("home_navtoggle")
-            document.getElementById("site_header").classList.toggle("site_header");
-            document.getElementById("site_header").classList.toggle("site_header_navtoggle")
+            if (navtoggler === 0) {
+                document.getElementById("menu_toggle").classList.toggle("slideIn");
+                document.getElementById("menu_toggle").classList.toggle("menu_navtoggle");
+                document.getElementById("home").classList.toggle("home");
+                document.getElementById("home").classList.toggle("home_navtoggle");
+                document.getElementById("site_header").classList.toggle("site_header");
+                document.getElementById("site_header").classList.toggle("site_header_navtoggle");
+                navtoggler = 1;
+            } else {
+                document.getElementById("menu_toggle").classList.remove("slideIn");
+                document.getElementById("menu_toggle").classList.toggle("slideOut")
+                setTimeout(function timer() {
+                    document.getElementById("menu_toggle").classList.toggle("menu_navtoggle");
+                    document.getElementById("home").classList.toggle("home");
+                    document.getElementById("home").classList.toggle("home_navtoggle");
+                    document.getElementById("site_header").classList.toggle("site_header");
+                    document.getElementById("site_header").classList.toggle("site_header_navtoggle")
+                    document.getElementById("menu_toggle").classList.remove("slideOut");
+                }, 1000);
+                navtoggler = 0;
+            }
         }
     </script>
 
