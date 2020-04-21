@@ -203,7 +203,7 @@ nav {
 
 .menu_toggle {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 200px;
     left: 0px;
     height: 100%;
@@ -335,7 +335,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 150px 0;
+    padding: 150px 0 150px 0;
 }
 
 .skills_column {
